@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agenda del Equipo Directivo</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#f39200">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="glass.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="login" class="login hidden">
+  <form id="loginForm" class="login-card">
+    <img id="loginLogo" class="logo-big hidden" alt="Logo">
+    <h1 id="loginNombre">Gestión institucional</h1>
+    <span class="cue" id="loginCue"></span>
+    <h2>Agenda del Equipo Directivo</h2>
+    <label>Usuario<input id="lu" autocomplete="username" required></label>
+    <label>Contraseña<input id="lp" type="password" autocomplete="current-password" required></label>
+    <button class="btn primary big" type="submit">Ingresar</button>
+    <p id="loginErr" class="error"></p>
+  </form>
+</section>
+
+<!-- APP -->
+<div id="app" class="hidden">
+  <header class="topbar">
+    <div class="brand" data-go="inicio">
+      <img id="logo" class="logo hidden" alt="">
+      <div id="logoPh" class="logo-ph">A</div>
+      <div>
+        <div id="hNombre" class="h-nombre"></div>
+        <div class="h-cue"><span id="hCue" class="cue"></span> <span id="hDist" class="muted" style="font-size:12px"></span></div>
+      </div>
+    </div>
+    <div class="clock">
+      <div class="clk-ico">🕒</div>
+      <div>
+        <div id="clkTime" class="clk-time"></div>
+        <div id="clkDate" class="clk-date"></div>
+      </div>
+    </div>
+    <div class="userbox">
+      <span id="net" class="net"></span>
+      <div class="me-chip" data-go="config" title="Mi perfil">
+        <span id="meAv"></span>
+        <div class="who"><b id="whoName"></b><span id="whoRole"></span></div>
+      </div>
+      <button class="btn small" id="logoutBtn">Salir</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <a data-go="inicio">Inicio</a>
+    <a data-go="general">Agenda General</a>
+    <a data-go="mia">Mi agenda</a>
+    <a data-go="equipo">Agendas del equipo</a>
+    <a data-go="panel">Panel de Control</a>
+    <a data-go="chat">Chat <span id="chatBadge" class="badge" style="display:none"></span></a>
+    <a data-go="config">Configuración</a>
+  </nav>
+
+  <main id="view"></main>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden"><div class="modal-box" id="modalBox"></div></div>
+<div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "Agenda del Equipo Directivo",
+  "short_name": "Agenda",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f4f7",
+  "theme_color": "#f39200",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
